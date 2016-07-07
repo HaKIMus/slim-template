@@ -1,0 +1,13 @@
+{
+    "require": {
+        "slim/slim": "^3.4",
+        "illuminate/database": "*",
+        "twig/twig": "~1.24",
+        "slim/twig-view": "^2.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app"
+        }
+    }
+}

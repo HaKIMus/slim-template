@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>{{ titleWebsite }}</title>
+
+        {# Optional google font #}
+        {# font-family: 'Pontano Sans', sans-serif; AND font-family: 'Lato', sans-serif; #}
+        <link href='https://fonts.googleapis.com/css?family=Pontano+Sans|Lato:400,100&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <link rel="stylesheet" href="{{ base_url() }}/assets/css/main.css">
+        {% block stylesheets %}{% endblock %}
+    </head>
+    <body>
+        {% include 'templates/navbar.html.twig' %}
+        {% block body %}{% endblock %}
+
+        <script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    </body>
+</html>
