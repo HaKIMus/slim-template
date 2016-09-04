@@ -1,8 +1,7 @@
 {
     "require": {
-        "slim/slim": "^3.4",
+        "slim/slim": "^3.5",
         "illuminate/database": "*",
-        "twig/twig": "~1.24",
         "slim/twig-view": "^2.1"
     },
     "autoload": {
