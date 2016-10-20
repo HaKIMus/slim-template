@@ -6,7 +6,7 @@ class HomeController extends Controller
 {
     public function index($request, $response)
     {
-        return $this->view->render($response, 'main/slim_template.twig', [
+        return $this->view->render($response, 'main/homepage.twig', [
             'titleWebsite' => 'Slim Template',
         ]);
     }
