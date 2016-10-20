@@ -6,7 +6,7 @@
 
 <p>List of package:</p>
 <ul>
-    <li>Php >=5.5<li>
+    <li>Php >=5.5</li>
     <li>Slim ^3.5</li>
     <li>Illuminate Database 5.3.16</li>
     <li>Slim Twig View 2.1</li>
