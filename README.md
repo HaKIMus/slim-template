@@ -1,5 +1,5 @@
 <h1>Slim Template</h1>
-<h2>Current Version: 1.0.0</h2>
+<h2>Current Version: 1.1.0</h2>
 <span>Earlier version: 0.4.1</span>
 
 
