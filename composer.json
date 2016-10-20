@@ -1,7 +1,11 @@
 {
     "require": {
         "php": ">=5.5",
+<<<<<<< HEAD
         "slim/slim": "3.5",
+=======
+        "slim/slim": "^3.5",
+>>>>>>> feature/Feature
         "illuminate/database": "5.3.16",
         "slim/twig-view": "^2.1"
     },

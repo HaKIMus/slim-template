@@ -14,5 +14,9 @@
 </ul>
 
 <footer>
+<<<<<<< HEAD
     <p>Hace a nice day!</p>
+=======
+    <p>Have a nice day!</p>
+>>>>>>> feature/Feature
 </footer>
