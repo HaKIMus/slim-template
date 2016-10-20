@@ -1,5 +1,5 @@
 <h1>Slim Template</h1>
-<h2>Current Version: 0.3</h2>
+<h2>Current Version: 0.4.0</h2>
 
 <p>This is a simple silm template.</p>
 <p>Do not forget configure the database!</p>
