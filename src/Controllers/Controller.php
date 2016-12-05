@@ -1,6 +1,9 @@
 <?php
+declare (strict_types = 1);
 
-namespace App\Controllers;
+namespace Src\Controllers;
+
+use Slim\Views\Twig;
 
 class Controller
 {
@@ -11,7 +14,7 @@ class Controller
         $this->container = $container;
     }
 
-    public function __get($property)
+    public function __get($property): Twig
     {
         if($this->container->{$property}){
             return $this->container->{$property};
