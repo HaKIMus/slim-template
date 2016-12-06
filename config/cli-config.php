@@ -1,14 +1,16 @@
 <?php
 declare (strict_types = 1);
 
+use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\Tools\Console\ConsoleRunner;
+use Doctrine\ORM\Tools\Setup;
 
 require __DIR__ . '/../vendor/autoload.php';
 
-$slimConfig = include __DIR__ . '/../app/config/slimConfig.php';
+$slimConfig = include __DIR__ . '/../app/config/appConfig.php';
 $doctrineSettings = $slimConfig['settings']['doctrine'];
 
-$config = \Doctrine\ORM\Tools\Setup::createAnnotationMetadataConfiguration(
+$config = Setup::createAnnotationMetadataConfiguration(
     $doctrineSettings['meta']['entity_path'],
     $doctrineSettings['meta']['auto_generate_proxies'],
     $doctrineSettings['meta']['proxy_dir'],
@@ -16,6 +18,6 @@ $config = \Doctrine\ORM\Tools\Setup::createAnnotationMetadataConfiguration(
     false
 );
 
-$em = \Doctrine\ORM\EntityManager::create($doctrineSettings['connection'], $config);
+$em = EntityManager::create($doctrineSettings['connection'], $config);
 
 return ConsoleRunner::createHelperSet($em);

@@ -3,8 +3,7 @@
     <ul>
         <li><a href="{{ base_url() }}">Home</a></li>
         <li><a href="http://www.slimframework.com/docs/">Doc Slim</a></li>
-        <li><a href="http://www.slimframework.com/">Slim</a></li>
-        <li><a href="https://github.com/HaKIMus/slim-template">GitHub</a></li>
+        <li><a href="https://github.com/HaKIMus/slim-template">Repo</a></li>
     </ul>
 </nav>
 
@@ -14,8 +13,22 @@
             float: right;
             display: inline-block;
         }
+        nav > a{
+            color: #fff;
+            text-decoration: none;
+        }
+        nav > a:hover, nav > a:focus{
+            text-decoration: underline;
+        }
         nav > ul > li {
             display: inline-block;
+        }
+        nav > ul > li > a{
+            color: #fff;
+            text-decoration: none;
+        }
+        nav > ul > li > a:hover, nav > ul > li > a:focus{
+            text-decoration: underline;
         }
     </style>
 {% endblock %}
