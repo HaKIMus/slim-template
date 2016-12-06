@@ -1,6 +1,6 @@
 <h1>Slim Template</h1>
-<h2>Current Version: 1.2.1</h2>
-<p>Earlier version: 1.2.0</p>
+<h2>Current Version: 1.2.2</h2>
+<p>Earlier version: 1.2.1</p>
 
 <main>
 <p>This is a template for slim which implement an MVC pattern.</p>
