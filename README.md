@@ -1,6 +1,6 @@
 <h1>Slim Template</h1>
-<h2>Current Version: 1.2.2</h2>
-<p>Earlier version: 1.2.1</p>
+<h2>Current Version: 1.3.0</h2>
+<p>Earlier version: 1.2.2</p>
 
 <main>
 <p>This is a template for slim which implement an MVC pattern.</p>
@@ -13,6 +13,7 @@
     <li>Slim 3.6</li>
     <li>Doctrine 2.5</li>
     <li>Slim Twig View 2.1</li>
+    <li>Symfony Yaml 3.2</li>
     <li>Autoloader Psr-4</li>
 </ul>
 </main>

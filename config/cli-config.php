@@ -4,20 +4,27 @@ declare (strict_types = 1);
 use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\Tools\Console\ConsoleRunner;
 use Doctrine\ORM\Tools\Setup;
+use Symfony\Component\Yaml\Yaml;
 
 require __DIR__ . '/../vendor/autoload.php';
 
-$slimConfig = include __DIR__ . '/../app/config/appConfig.php';
-$doctrineSettings = $slimConfig['settings']['doctrine'];
+$doctrineConfig = Yaml::parse(file_get_contents(__DIR__ . '/../app/config/doctrineConfig.yml'));
 
-$config = Setup::createAnnotationMetadataConfiguration(
-    $doctrineSettings['meta']['entity_path'],
-    $doctrineSettings['meta']['auto_generate_proxies'],
-    $doctrineSettings['meta']['proxy_dir'],
-    $doctrineSettings['meta']['cache'],
-    false
+$paths = $doctrineConfig['doctrine']['meta']['entityPath'];
+$isDevMode = $doctrineConfig['doctrine']['meta']['devMode'];
+$dbParams = $doctrineConfig['doctrine']['connection'];
+$config = Setup::createYAMLMetadataConfiguration($paths, $isDevMode);
+
+$namespaces = [
+    __DIR__ . '/../src/Entity' => 'Entity'
+];
+
+$driver = new \Doctrine\ORM\Mapping\Driver\SimplifiedYamlDriver($namespaces);
+$driver->setGlobalBasename('global');
+
+$config->setMetadataDriverImpl($driver);
+
+$entityManger = EntityManager::create($dbParams, $config
 );
 
-$em = EntityManager::create($doctrineSettings['connection'], $config);
-
-return ConsoleRunner::createHelperSet($em);
+return ConsoleRunner::createHelperSet($entityManger);

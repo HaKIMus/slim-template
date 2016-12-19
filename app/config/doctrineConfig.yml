@@ -1,0 +1,14 @@
+doctrine:
+  meta:
+    entityPath:
+      - src/Entity/
+    autoGenerateProxies: true
+    proxyDir: null
+    cache: true
+    devMode: true
+  connection:
+    driver: pdo_mysql
+    host: 127.0.0.1
+    dbname: test
+    user: root
+    password: ''
