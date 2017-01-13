@@ -1,5 +1,5 @@
 <?php
-declare (strict_types = 1);
+declare (strict_types=1);
 
 use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\Tools\Setup;
@@ -10,8 +10,10 @@ use Symfony\Component\Yaml\Yaml;
 
 $container = $app->getContainer();
 
-$container['view'] = function($container): Twig{
-    $view = new Twig(__DIR__ . '/../resources/views', [
+$container['titleWebsite'] = $appConfig['extras']['titleWebsite'];
+
+$container['view'] = function($container){
+    $view = new Twig(__DIR__ . '/resources/views', [
         'cache' => false,
     ]);
 
@@ -23,24 +25,18 @@ $container['view'] = function($container): Twig{
     return $view;
 };
 
-$container['entityManager'] = function (): EntityManager {
-    $doctrineConfig = Yaml::parse(file_get_contents(__DIR__ . '/../app/config/doctrineConfig.yml'));
+$container['entityManager'] = function ($container): EntityManager {
+    $doctrineSettings = Yaml::parse(file_get_contents(__DIR__ . '/../app/config/doctrine.yml'))['doctrine'];
 
-    $paths = $doctrineConfig['doctrine']['meta']['entityPath'];
-    $isDevMode = $doctrineConfig['doctrine']['meta']['devMode'];
-    $dbParams = $doctrineConfig['doctrine']['connection'];
+    $config = Setup::createAnnotationMetadataConfiguration(
+        $doctrineSettings['meta']['entity_path'],
+        $doctrineSettings['meta']['auto_generate_proxies'],
+        $doctrineSettings['meta']['proxy_dir'],
+        $doctrineSettings['meta']['cache'],
+        false
+    );
 
-    $config = Setup::createYAMLMetadataConfiguration($paths, $isDevMode);
-
-    $namespaces = [
-        __DIR__ . '/../src/Entity' => 'Entity'
-    ];
-
-    $driver = new \Doctrine\ORM\Mapping\Driver\SimplifiedYamlDriver($namespaces);
-
-    $config->setMetadataDriverImpl($driver);
-
-    return EntityManager::create($dbParams, $config);
+    return EntityManager::create($doctrineSettings['connection'], $config);
 };
 
 $container['HomeController'] = function($container): HomeController {

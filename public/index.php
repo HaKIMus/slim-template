@@ -5,11 +5,9 @@ use Symfony\Component\Yaml\Yaml;
 session_start();
 
 require __DIR__ . '/../vendor/autoload.php';
+$appConfig = Yaml::parse(file_get_contents('../app/config/app.yml'));
 
-$appConfig = Yaml::parse(file_get_contents(__DIR__ . '/../app/config/appConfig.yml'));
-$doctrineConfig = Yaml::parse(file_get_contents(__DIR__ . '/../app/config/doctrineConfig.yml'));
-
-$app = new \Slim\App($appConfig, $doctrineConfig);
+$app = new \Slim\App($appConfig);
 
 $container = $app->getContainer();
 
