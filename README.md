@@ -10,7 +10,7 @@
 <b>Warning: application require ^PHP 7.0.</b>
 <hr>
     
-<p>List of package:</p>
+<p>List of packages:</p>
 <ul>
     <li>Slim 3.7</li>
     <li>Doctrine 2.5</li>
