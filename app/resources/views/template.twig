@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>{{ titleWebsite }}</title>
+        {% block stylesheets %}{% endblock %}
+    </head>
+    <body>
+        {% include 'templates/navbar.twig' %}
+        {% block body %}{% endblock %}
+    </body>
+</html>

@@ -1,0 +1,27 @@
+{% extends 'template.twig' %}
+
+{% block body %}
+    <h1>{{ titleWebsite }}</h1>
+    <h2>Version: 1.3.0</h2>
+{% endblock %}
+
+{% block stylesheets %}
+    <style>
+        body{
+            background-color: #719e40;
+        }
+
+        h1{
+            font-size: 6em;
+            text-align: center;
+            color: #fff;
+            font-weight: 100;
+        }
+
+        h2{
+            font-size: 2em;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.42);
+        }
+    </style>
+{% endblock %}
