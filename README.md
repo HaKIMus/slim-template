@@ -1,20 +1,25 @@
-# Slim Template
+<h1>Slim Template</h1>
+<h5>Current Version: 1.3.0</h5>
+<p>Earlier version: 1.2.2</p>
 
-<p>Hi there!</p>
-<p>This is a simple silm template</p>
+<main>
+<p>This is a template for slim which implement the <a href="https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93presenter">MVP</a> pattern.</p>
+<p>Do not forget configure the doctrine!</p>
 
-<p>List of package:</p>
+<hr>
+<b>Warning: application require ^PHP 7.0.</b>
+<hr>
+    
+<p>List of packages:</p>
 <ul>
-    <li>Slim 3.4</li>
-    <li>Illuminate Database</li>
-    <li>Twig 1.24</li>
+    <li>Slim 3.7</li>
+    <li>Doctrine 2.5</li>
     <li>Slim Twig View 2.1</li>
     <li>Autoloader Psr-4</li>
-    <li>Bootstrap 3.3.6</li>
-    <li>Google Fonts Pontano Sans and Lato</li>
+    <li>Symfony Yaml 3.2</li>
 </ul>
+</main>
 
 <footer>
-    <p>Hace a nice day!</p>
-    <p>Contact: <a href="mailto:webdevhakim@gmail.com:">webdevhakim@gmail.com</a></p>
-</footer>
+    <p>Have a nice day!</p>
+</footer>   
