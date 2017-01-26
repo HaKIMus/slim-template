@@ -5,10 +5,12 @@ use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\Tools\Setup;
 use Slim\Views\Twig;
 use Slim\Views\TwigExtension;
-use Src\Controllers\HomeController;
+use Src\Controller\HomeController;
 use Symfony\Component\Yaml\Yaml;
 
 $container = $app->getContainer();
+
+$appConfig = Yaml::parse(file_get_contents(__DIR__ . '/config/app.yml'));
 
 $container['titleWebsite'] = $appConfig['extras']['titleWebsite'];
 
