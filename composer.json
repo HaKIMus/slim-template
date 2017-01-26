@@ -4,14 +4,16 @@
     "slim/slim": "3.7",
     "slim/twig-view": "^2.1",
     "doctrine/orm": "^2.5",
-    "symfony/yaml": "^3.2"
+    "symfony/yaml": "^3.2",
+    "phpunit/phpunit": "^5.7"
   },
 
   "autoload": {
     "psr-4": {
       "Src\\": "src",
       "App\\": "app",
-      "Entity\\": "src/Model/Entity"
+      "Entity\\": "src/Model/Entity",
+      "Test\\": "tests"
     }
   }
 }

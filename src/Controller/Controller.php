@@ -1,7 +1,7 @@
 <?php
 declare (strict_types=1);
 
-namespace Src\Controllers;
+namespace Src\Controller;
 
 use Slim\Container;
 use Slim\Views\Twig;
@@ -15,7 +15,7 @@ class Controller
         $this->container = $container;
     }
 
-    public function __get(string $property): Twig
+    public function __get(string $property)
     {
         if ($this->container->{$property}) {
             return $this->container->{$property};

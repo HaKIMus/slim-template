@@ -1,7 +1,7 @@
 doctrine:
   meta:
       entity_path:
-          - path
+          - /../../src/Model/Entity
       auto_generate_proxies: false
       proxy_dir: path
       cache: null
