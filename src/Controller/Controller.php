@@ -1,10 +1,9 @@
 <?php
-declare (strict_types=1);
+declare (strict_types = 1);
 
 namespace Src\Controller;
 
 use Slim\Container;
-use Slim\Views\Twig;
 
 class Controller
 {
