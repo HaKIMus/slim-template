@@ -12,11 +12,11 @@
     
 <p>List of packages:</p>
 <ul>
-    <li>Slim 3.7</li>
-    <li>Doctrine 2.5</li>
-    <li>Slim Twig View 2.1</li>
+    <li>Slim ^3.7</li>
+    <li>Doctrine ^2.5</li>
+    <li>Slim Twig View ^2.1</li>
+    <li>Symfony Yaml ^3.2</li>
     <li>Autoloader Psr-4</li>
-    <li>Symfony Yaml 3.2</li>
 </ul>
 </main>
 
