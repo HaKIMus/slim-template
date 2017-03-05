@@ -15,6 +15,7 @@
     <li>Slim Twig View 2.1</li>
     <li>Autoloader Psr-4</li>
     <li>Symfony Yaml 3.2</li>
+    <li>Codeception *</li>
 </ul>
 </main>
 
