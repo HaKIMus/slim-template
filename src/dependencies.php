@@ -1,8 +1,6 @@
 <?php
-declare (strict_types=1);
+declare (strict_types = 1);
 
-use Doctrine\ORM\EntityManager;
-use Doctrine\ORM\Tools\Setup;
 use Slim\Views\Twig;
 use Slim\Views\TwigExtension;
 use Src\Controller\HomeController;
@@ -14,7 +12,7 @@ $appConfig = Yaml::parse(file_get_contents(__DIR__ . '/../app/config/app.yml'));
 
 $container['titleWebsite'] = $appConfig['extras']['titleWebsite'];
 
-$container['view'] = function($container){
+$container['view'] = function ($container) {
     $view = new Twig(__DIR__ . '/../app/resources/views', [
         'cache' => false,
     ]);
