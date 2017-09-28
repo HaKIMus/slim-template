@@ -1,8 +1,9 @@
 {
   "name": "hakimus/slim-template-mvp",
-  "type": "library",
-  "keywords": ["slim", "template", "micro framework"],
+  "type": "project",
+  "keywords": ["slim", "template", "microframework"],
   "license": "MIT",
+  "homepage": "https://github.com/HaKIMus/slim-template",
   "description": "It's the template for Slim micro framework with implemented MVP pattern.",
 
   "authors": [{
