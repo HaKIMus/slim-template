@@ -1,7 +1,7 @@
 <?php
 declare (strict_types = 1);
 
-namespace Src\Controller;
+namespace App\Controller;
 
 use Slim\Container;
 

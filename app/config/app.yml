@@ -1,5 +1,3 @@
 settings:
   displayErrorDetails: true
   determineRouteBeforeAppMiddleware: true
-extras:
-    titleWebsite: 'Slim Template'

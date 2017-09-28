@@ -1,8 +1,8 @@
 {% extends 'template.twig' %}
 
 {% block body %}
-    <h1>{{ titleWebsite }}</h1>
-    <h2>Version: 2.1.0</h2>
+    <h2>Hello {{ userName }}!</h2>
+    <p>Version: 2.1.0</p>
 {% endblock %}
 
 {% block stylesheets %}
@@ -11,14 +11,14 @@
             background-color: #719e40;
         }
 
-        h1{
-            font-size: 6em;
+        h2{
+            font-size: 4em;
             text-align: center;
             color: #fff;
             font-weight: 100;
         }
 
-        h2{
+        p{
             font-size: 2em;
             text-align: center;
             color: rgba(255, 255, 255, 0.42);

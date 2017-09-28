@@ -1,7 +1,7 @@
 <?php
 declare (strict_types = 1);
 
-namespace Src\Middleware;
+namespace App\Middleware;
 
 class Middleware
 {

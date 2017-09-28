@@ -8,11 +8,11 @@
 <b>Warning: application require ^PHP 7.0.</b>
     
 <p>List of packages:</p>
+
 <ul>
     <li>Slim ^3.8.1</li>
     <li>Slim Twig View ^2.1</li>
     <li>Symfony Yaml ^3.2</li>
-    <li>Codeception *</li>
     <li>Autoloader Psr-4</li>
 </ul>
 </main>
@@ -20,5 +20,5 @@
 <p>MIT License.</p>
 
 <footer>
-    <p>Have a nice day!</p>
+<p>Have a nice day!</p>
 </footer>

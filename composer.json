@@ -1,16 +1,27 @@
 {
+  "name": "hakimus/slim-template-mvp",
+  "type": "library",
+  "keywords": ["slim", "template", "micro framework"],
+  "license": "MIT",
+  "description": "It's the template for Slim micro framework with implemented MVP pattern.",
+
+  "authors": [{
+      "name": "Sebastian",
+      "email": "webdevhakim@gmail.com",
+      "homepage": "https://hakimus.github.io/",
+      "role": "Author"
+  }],
+
   "require": {
     "php": "^7.0",
     "slim/slim": "^3.8.1",
     "slim/twig-view": "^2.1",
-    "symfony/yaml": "^3.2",
-    "codeception/codeception": "*"
+    "symfony/yaml": "^3.2"
   },
 
   "autoload": {
     "psr-4": {
-      "Src\\": "src",
-      "Test\\": "tests"
+      "App\\": "src"
     }
   }
 }

@@ -1,5 +1,5 @@
 <nav>
-    <a href="{{ base_url() }}">{{ titleWebsite }}</a>
+    <h1><a href="{{ base_url() }}">Slim Template</a></h1>
     <ul>
         <li><a href="{{ base_url() }}">Home</a></li>
         <li><a href="http://www.slimframework.com/docs/">Doc Slim</a></li>
@@ -9,17 +9,31 @@
 
 {% block stylesheets %}
     <style>
-        nav > ul{
-            float: right;
-            display: inline-block;
+        nav {
+            height: 70px;
         }
-        nav > a{
+
+        nav > h1{
+            float: left;
+            margin: 0;
+            line-height: 1.2em;
+        }
+
+        nav > h1 > a{
             color: #fff;
             text-decoration: none;
         }
-        nav > a:hover, nav > a:focus{
+
+        nav > h1 > a:hover, nav > a:focus{
             text-decoration: underline;
         }
+
+        nav > ul{
+            float: right;
+            display: inline-block;
+            line-height: 1.2em;
+        }
+
         nav > ul > li {
             display: inline-block;
         }
