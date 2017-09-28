@@ -2,6 +2,12 @@
 <h5>Current Version: 3.0.0</h5>
 <p>Earlier version: 2.1.0</p>
 
+Run this command from the directory in which you want to install Slim Template:
+
+```
+composer create-project hakimus/slim-template-mvp
+```
+
 <main>
 <p>This is a template for slim which implement the <a href="https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93presenter">MVP</a> pattern.</p>
 
