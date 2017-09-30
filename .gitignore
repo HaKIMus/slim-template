@@ -2,4 +2,3 @@
 vendor
 composer.lock
 README.md
-tests/_output/*
